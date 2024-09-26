@@ -6,13 +6,13 @@
 Задача состояла в создании модели, чья MAE не превышала бы 1 *meV*, т.е. погрешность DFT для рассчета энергии молекул. Для этого тестировали гипотезы по взаимодействию с молекулами.
 
 ### Solution
-Анализ датасета и создание baseline - []()
+Анализ датасета и создание baseline - [analisys](https://github.com/Gruz2520/predict_energy_of_mols/blob/main/notebooks/analisys.ipynb)
 
-Обучение модели и валидация - []()
+Обучение модели и валидация - [train](https://github.com/Gruz2520/predict_energy_of_mols/blob/main/notebooks/training.ipynb)
 
-Обучение на датасете с добавлением сэмплов из qm9 - []()
+Обучение на датасете с добавлением сэмплов из qm9 - [train_qm9](https://github.com/Gruz2520/predict_energy_of_mols/blob/main/notebooks/train_with_qm9.ipynb)
 
-В папке [other models]() тестировали другие модели для последующего сравнительного анализа результатов.
+В папке [other models](https://github.com/Gruz2520/predict_energy_of_mols/tree/main/other_models) тестировали другие модели для последующего сравнительного анализа результатов.
 
 ### Results
 |Model|MAE|
