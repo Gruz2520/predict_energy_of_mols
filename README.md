@@ -23,6 +23,7 @@
 |comenet|0.0031 meV\atom|
 
 Результаты вычислений были произведены на кластере ВШЭ. 
+
 [work rep](https://github.com/Gruz2520/megnet_tests)
 
 ### Requirements
