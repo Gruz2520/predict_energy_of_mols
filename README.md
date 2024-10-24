@@ -1,18 +1,18 @@
 ## Introduction
-Точное предсказание энергетических характеристик молекул имеет важное значение в различных областях, включая квантовую химию, катализ, материаловедение и разработку лекарственных препаратов. Традиционные методы, основанные на ab-initio вычислениях, могут быть очень затратными по времени и вычислительным ресурсам, особенно для больших молекулярных систем.
+Accurate prediction of the energy characteristics of molecules is important in various fields including quantum chemistry, catalysis, materials science and drug design. Traditional methods based on ab-initio calculations can be very time and computationally expensive, especially for large molecular systems.
 
-В этом проекте я использую [MatErials Graph Network (MEGNet)](https://github.com/materialsvirtuallab/megnet), одну из самых популярных популярных графовых нейронных сетей для предсказания свойств молекул по их графовому представлению. Ключевая особенность [MEGNet](https://github.com/materialsvirtuallab/megnet) в сравнении с другими моделями заключается в ее легковестности и в передовом использовании тройных типов фичей для каждой молекулы, которые стали основоположниками в последующих исследованиях и разработках, например, [M3GNet](https://www.nature.com/articles/s43588-022-00349-3).
+In this project, I use [MatErials Graph Network (MEGNet)](https://github.com/materialsvirtuallab/megnet), one of the most popular mainstream graph neural networks for predicting the properties of molecules from their graph representation. The main feature of [MEGNet](https://github.com/materialsvirtuallab/megnet) in comparison to other models is its lightweight nature and its advanced use of triple-type features for each molecule, which have been pioneering in subsequent research and development, e.g., [M3GNet](https://www.nature.com/articles/s43588-022-00349-3).
 
-Задача состояла в создании модели, чья MAE не превышала бы 1 *meV*, т.е. погрешность DFT для рассчета энергии молекул. Для этого тестировали гипотезы по взаимодействию с молекулами.
+The task was to create a model whose MAE would not exceed 1 *meV*, i.e., the DFT error for calculating the energy of molecules. To do this, hypotheses for molecule interactions were tested.
 
 ### Solution
-Анализ датасета и создание baseline - [analisys](https://github.com/Gruz2520/predict_energy_of_mols/blob/main/notebooks/analisys.ipynb)
+Dataset analysis and baseline creation - [analisys](https://github.com/Gruz2520/predict_energy_of_mols/blob/main/notebooks/analisys.ipynb)
 
-Обучение модели и валидация - [train](https://github.com/Gruz2520/predict_energy_of_mols/blob/main/notebooks/training.ipynb)
+Model training and validation - [train](https://github.com/Gruz2520/predict_energy_of_mols/blob/main/notebooks/training.ipynb)
 
-Обучение на датасете с добавлением сэмплов из qm9 - [train_qm9](https://github.com/Gruz2520/predict_energy_of_mols/blob/main/notebooks/train_with_qm9.ipynb)
+Training on dataset with added samples from qm9 - [train_qm9](https://github.com/Gruz2520/predict_energy_of_mols/blob/main/notebooks/train_with_qm9.ipynb)
 
-В папке [other models](https://github.com/Gruz2520/predict_energy_of_mols/tree/main/other_models) тестировали другие модели для последующего сравнительного анализа результатов.
+In the folder [other models](https://github.com/Gruz2520/predict_energy_of_mols/tree/main/other_models) we tested other models for further comparative analysis of the results.
 
 ### Results
 |Model|MAE|
@@ -22,13 +22,13 @@
 |dimenet++|0.0066 meV\atom|
 |comenet|0.0031 meV\atom|
 
-Результаты вычислений были произведены на кластере ВШЭ. 
+The computational results were produced on the [HSE cluster cHARISMa](https://hpc.hse.ru/en/hardware/hpc-cluster/). 
 
 [work rep](https://github.com/Gruz2520/megnet_tests)
 
 ### Requirements
 
-Из-за того, что основной репазиторий перестал поддерживаться, а основные библиотеки скакнули вперед, то пришлось переписать некоторые исходники, чтобы она нормально запускалась.
+Because the main rep is no longer supported and the core libraries have jumped ahead, we had to rewrite some of the source code to make it run normally.
 
 - Python 3.7.9
 
